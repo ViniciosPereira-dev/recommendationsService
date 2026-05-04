@@ -1,21 +1,18 @@
 {
-  "name": "recommendationsservice",
+  "name": "recommendation-service",
   "version": "1.0.0",
-  "description": "",
+  "type": "module",
+  "description": "Microserviço de recomendação de livros",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ViniciosPereira-dev/recommendationsService.git"
+    "start": "node index.js",
+    "dev": "node --watch index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/ViniciosPereira-dev/recommendationsService/issues"
-  },
-  "homepage": "https://github.com/ViniciosPereira-dev/recommendationsService#readme"
+  "dependencies": {
+    "axios": "^1.16.0",
+    "express": "^5.2.1"
+  }
 }
