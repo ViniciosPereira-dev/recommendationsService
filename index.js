@@ -1,5 +1,7 @@
+import "dotenv/config";
 import express from 'express';
 import axios from 'axios';
+
 
 const app = express();
 const PORT = 4000;
@@ -12,7 +14,13 @@ app.get("/recommendation", async (req, res) => {
     try {
         const { genre } = req.query;
 
-        const response = await axios.get("http://localhost:3000/books/books");
+        const response = await axios.get("http://localhost:3000/books/", 
+            {
+                headers: {
+                    "x-api-key": process.env.API_KEY
+                }
+            }
+        )
         const books = response.data.data || response.data;
 
         if (!books || books.length === 0) {
