@@ -1,9 +1,11 @@
 import "dotenv/config";
 import express from 'express';
 import axios from 'axios';
+import cors from 'cors';
 
 
 const app = express();
+app.use(cors());
 const PORT = 4000;
 
 app.listen(PORT, () => {
